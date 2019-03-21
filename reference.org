@@ -10,7 +10,7 @@
 #+PRIORITIES: A C B
 #+CATEGORY:   communication
 #+CONSTANTS: pi=3.14159265358979323846
-#+STYLE: <link rel="stylesheet" type="text/css" href="slides.css" />
+
 
 * A pseudo language for structure knowledge around FOH (Front of House) audio and mental activities
 

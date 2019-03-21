@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-03-21 Thu 14:00 -->
+<!-- 2019-03-21 Thu 14:09 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>FOH audio engineer pseudo-language reference</title>
@@ -307,92 +307,92 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orga74138e">A pseudo language for structure knowledge around FOH (Front of House) audio and mental activities</a>
+<li><a href="#org4983102">A pseudo language for structure knowledge around FOH (Front of House) audio and mental activities</a>
 <ul>
-<li><a href="#orgf55d6ba">Data Types</a>
+<li><a href="#orga88b830">Data Types</a>
 <ul>
-<li><a href="#org2737d86">audioStream</a></li>
-<li><a href="#org8ac3ae6">controlStream</a></li>
-<li><a href="#orgded0d09">spectactor</a></li>
-<li><a href="#org9a302e7">crew</a></li>
-<li><a href="#org6e6ce73">audioChain</a></li>
-<li><a href="#org77066d9">blackHole</a></li>
-<li><a href="#org093f81a">dinamicRange</a></li>
-<li><a href="#orgbfd20e8">coberture</a></li>
-<li><a href="#org4a1b4e8">lowFreqDispertion</a></li>
-<li><a href="#orgfa98624">audioSpots</a></li>
-<li><a href="#org79fb52b">stageLekage</a></li>
-<li><a href="#orga7a11e5">bus</a></li>
-<li><a href="#orgd280910">matrix</a></li>
-<li><a href="#org1071052">subGroup</a></li>
-<li><a href="#org4ab38e8">VCA</a></li>
-<li><a href="#orge3acc22">glitch</a></li>
-<li><a href="#org5990400">feedback</a></li>
-<li><a href="#orgddc1399">musicalError</a></li>
-<li><a href="#org7f001cb">userCookies</a></li>
-<li><a href="#org6e305ce">importance</a></li>
-<li><a href="#orgc5b5724">moneyChannel</a></li>
-<li><a href="#org6db1eb2">Reactionist</a></li>
+<li><a href="#org14e6104">audioStream</a></li>
+<li><a href="#org0d115c0">controlStream</a></li>
+<li><a href="#org2ef96c8">spectactor</a></li>
+<li><a href="#orgf1a3927">crew</a></li>
+<li><a href="#org51a1cb8">audioChain</a></li>
+<li><a href="#org7184bbb">blackHole</a></li>
+<li><a href="#orgaf73bce">dinamicRange</a></li>
+<li><a href="#org74a3a3c">coberture</a></li>
+<li><a href="#orgbbc12b1">lowFreqDispertion</a></li>
+<li><a href="#orgbdf4de8">audioSpots</a></li>
+<li><a href="#org5ba8990">stageLekage</a></li>
+<li><a href="#orga8a03ad">bus</a></li>
+<li><a href="#org433cee6">matrix</a></li>
+<li><a href="#org7bee194">subGroup</a></li>
+<li><a href="#org2e420bf">VCA</a></li>
+<li><a href="#orgb149d77">glitch</a></li>
+<li><a href="#org5cab612">feedback</a></li>
+<li><a href="#org0cfcf5c">musicalError</a></li>
+<li><a href="#org61c9b80">userCookies</a></li>
+<li><a href="#orgd080d00">importance</a></li>
+<li><a href="#org996b37c">moneyChannel</a></li>
+<li><a href="#org70d302d">Reactionist</a></li>
 </ul>
 </li>
-<li><a href="#orgc82b940">Operators</a>
+<li><a href="#orgd4b0659">Operators</a>
 <ul>
-<li><a href="#org4b21fd0">mix</a></li>
-<li><a href="#org8110bdd">append</a></li>
-<li><a href="#org0414527">process</a></li>
-<li><a href="#orgb612ec5">mute</a></li>
-<li><a href="#org32ef40a">route</a></li>
-<li><a href="#orgda45fdb">duplicate</a></li>
-<li><a href="#orgbb506c9">align</a></li>
-<li><a href="#org80d19be">unAlign</a></li>
-<li><a href="#orge8f9822">equalize</a></li>
-<li><a href="#org377b585">deformFrequencyResponse</a></li>
-<li><a href="#org5797f70">deformTimeResponse</a></li>
-<li><a href="#org415e9c3">distract</a></li>
+<li><a href="#org4cc1302">mix</a></li>
+<li><a href="#orgea4f30d">append</a></li>
+<li><a href="#org2f67049">process</a></li>
+<li><a href="#org0757577">mute</a></li>
+<li><a href="#org292af34">route</a></li>
+<li><a href="#orgcd97095">duplicate</a></li>
+<li><a href="#org9e395cd">align</a></li>
+<li><a href="#orgee0a3bc">unAlign</a></li>
+<li><a href="#org6aaf99d">equalize</a></li>
+<li><a href="#org86a53a5">deformFrequencyResponse</a></li>
+<li><a href="#org52bb89d">deformTimeResponse</a></li>
+<li><a href="#orge0e7fdc">distract</a></li>
 </ul>
 </li>
-<li><a href="#org5ad5213">Control structures</a>
+<li><a href="#orgb425e7a">Control structures</a>
 <ul>
-<li><a href="#org58acf27">gainStructure</a></li>
-<li><a href="#org1e17a70">compress</a></li>
-<li><a href="#orge4ebf8f">expand</a></li>
-<li><a href="#orgacf34d2">compensate</a></li>
-<li><a href="#org6cb9143">panic [boolean]</a></li>
-<li><a href="#org58eafb7">Environment Variables</a></li>
-<li><a href="#org3f3ec4e">Score</a></li>
-<li><a href="#org6b59566">Resiliense</a></li>
+<li><a href="#org1b4a57d">gainStructure</a></li>
+<li><a href="#org6ad3387">compress</a></li>
+<li><a href="#org04d74d1">expand</a></li>
+<li><a href="#org77a699d">compensate</a></li>
+<li><a href="#org66b51d0">panic [boolean]</a></li>
+<li><a href="#org7b308f0">Environment Variables</a></li>
+<li><a href="#orgbf53ffc">Score</a></li>
+<li><a href="#org92e2ac1">Resiliense</a></li>
 </ul>
 </li>
-<li><a href="#orgca2320b">functions</a>
+<li><a href="#orgc1fb17a">functions</a>
 <ul>
-<li><a href="#org23b8a0f">contextConformation</a></li>
-<li><a href="#org60e70f1">contextTransformation</a></li>
-<li><a href="#orgee99b6a">highlight</a></li>
-<li><a href="#orge1cd3a1">mask</a></li>
-<li><a href="#org7d231ed">backendBlurr</a></li>
-<li><a href="#orgf83ab55">moneyChannel</a></li>
-<li><a href="#org2e29b5f">faderRide</a></li>
-<li><a href="#org8c6389e">mutilate</a></li>
-<li><a href="#org6e4b714">manyToOne / oneToMany</a></li>
-<li><a href="#org33fef8b">reSignificate</a></li>
-<li><a href="#orgcf43acb">southArt</a></li>
-<li><a href="#org2025fd9">snakeAlucination</a></li>
-<li><a href="#org5d6f048">dualMono</a></li>
-<li><a href="#org8a64c37">heyMister</a></li>
-<li><a href="#org77826ab">belowRadar</a></li>
-<li><a href="#org80e8583">eliminateComparison</a></li>
-<li><a href="#org82ea444">fastBuildUp</a></li>
-<li><a href="#org64a3f64">watchDog</a></li>
-<li><a href="#org8278da3">prepareForNext</a></li>
-<li><a href="#org8d7e65f">scoreReader</a></li>
-<li><a href="#orgdce3881">errorTail</a></li>
+<li><a href="#org991db98">contextConformation</a></li>
+<li><a href="#org0f833cc">contextTransformation</a></li>
+<li><a href="#org0b99a8a">highlight</a></li>
+<li><a href="#orgb480f41">mask</a></li>
+<li><a href="#org4ee7016">backendBlurr</a></li>
+<li><a href="#orgd77c52b">moneyChannel</a></li>
+<li><a href="#org18f2778">faderRide</a></li>
+<li><a href="#orgd3c681a">mutilate</a></li>
+<li><a href="#org031f147">manyToOne / oneToMany</a></li>
+<li><a href="#orga60e096">reSignificate</a></li>
+<li><a href="#orge672c1d">southArt</a></li>
+<li><a href="#orga3d62ec">snakeAlucination</a></li>
+<li><a href="#org3ddce22">dualMono</a></li>
+<li><a href="#org1a6d869">heyMister</a></li>
+<li><a href="#orgf8011b3">belowRadar</a></li>
+<li><a href="#org3ae529e">eliminateComparison</a></li>
+<li><a href="#org32ba4cd">fastBuildUp</a></li>
+<li><a href="#org67ae619">watchDog</a></li>
+<li><a href="#org66dc584">prepareForNext</a></li>
+<li><a href="#orgef38922">scoreReader</a></li>
+<li><a href="#org46ac526">errorTail</a></li>
 </ul>
 </li>
-<li><a href="#orgaeaf95a">test</a>
+<li><a href="#orgc0019a6">test</a>
 <ul>
-<li><a href="#org180af70">Survey your tools</a></li>
-<li><a href="#org8a2be78">Reach your goals</a></li>
-<li><a href="#org7ed29b9">Filling a hole</a></li>
+<li><a href="#org576dfa2">Survey your tools</a></li>
+<li><a href="#org003309f">Reach your goals</a></li>
+<li><a href="#org2ede41c">Filling a hole</a></li>
 </ul>
 </li>
 </ul>
@@ -401,9 +401,10 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-orga74138e" class="outline-2">
-<h2 id="orga74138e">A pseudo language for structure knowledge around FOH (Front of House) audio and mental activities</h2>
-<div class="outline-text-2" id="text-orga74138e">
+
+<div id="outline-container-org4983102" class="outline-2">
+<h2 id="org4983102">A pseudo language for structure knowledge around FOH (Front of House) audio and mental activities</h2>
+<div class="outline-text-2" id="text-org4983102">
 <p>
 Inspired by:
 </p>
@@ -422,56 +423,56 @@ Disclaimer: mainly broken english.
 </div>
 
 
-<div id="outline-container-orgf55d6ba" class="outline-3">
-<h3 id="orgf55d6ba">Data Types</h3>
-<div class="outline-text-3" id="text-orgf55d6ba">
+<div id="outline-container-orga88b830" class="outline-3">
+<h3 id="orga88b830">Data Types</h3>
+<div class="outline-text-3" id="text-orga88b830">
 </div>
-<div id="outline-container-org2737d86" class="outline-4">
-<h4 id="org2737d86">audioStream</h4>
-<div class="outline-text-4" id="text-org2737d86">
+<div id="outline-container-org14e6104" class="outline-4">
+<h4 id="org14e6104">audioStream</h4>
+<div class="outline-text-4" id="text-org14e6104">
 <p>
 Finite duration flux of analog or digital audio signal related to an event, writable by operators, controlStream's, soundGenerator's, readable by spectator, blackhole, feedback, musicalError, glith, etc.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org8ac3ae6" class="outline-4">
-<h4 id="org8ac3ae6">controlStream</h4>
-<div class="outline-text-4" id="text-org8ac3ae6">
+<div id="outline-container-org0d115c0" class="outline-4">
+<h4 id="org0d115c0">controlStream</h4>
+<div class="outline-text-4" id="text-org0d115c0">
 <p>
 finite flux of data intended to operate over an audioStream
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgded0d09" class="outline-4">
-<h4 id="orgded0d09">spectactor</h4>
-<div class="outline-text-4" id="text-orgded0d09">
+<div id="outline-container-org2ef96c8" class="outline-4">
+<h4 id="org2ef96c8">spectactor</h4>
+<div class="outline-text-4" id="text-org2ef96c8">
 <p>
 animated acoustic absorbers, readable as audioStream
 </p>
 </div>
 </div>
 
-<div id="outline-container-org9a302e7" class="outline-4">
-<h4 id="org9a302e7">crew</h4>
-<div class="outline-text-4" id="text-org9a302e7">
+<div id="outline-container-orgf1a3927" class="outline-4">
+<h4 id="orgf1a3927">crew</h4>
+<div class="outline-text-4" id="text-orgf1a3927">
 <p>
 Humans with different talents organized in a hierarchical system
 </p>
 </div>
 
 <ul class="org-ul">
-<li><a id="org0b2e70e"></a>roadies<br />
-<div class="outline-text-5" id="text-org0b2e70e">
+<li><a id="orga67715a"></a>roadies<br />
+<div class="outline-text-5" id="text-orga67715a">
 <p>
 audioStream guards
 </p>
 </div>
 </li>
 
-<li><a id="orgc50e946"></a>production manager<br />
-<div class="outline-text-5" id="text-orgc50e946">
+<li><a id="org84a7df4"></a>production manager<br />
+<div class="outline-text-5" id="text-org84a7df4">
 <p>
 can block or unblock master audioStream, conector with in-situ  provider of audio tools
 </p>
@@ -479,37 +480,37 @@ can block or unblock master audioStream, conector with in-situ  provider of audi
 </li>
 </ul>
 </div>
-<div id="outline-container-org6e6ce73" class="outline-4">
-<h4 id="org6e6ce73">audioChain</h4>
+<div id="outline-container-org51a1cb8" class="outline-4">
+<h4 id="org51a1cb8">audioChain</h4>
 </div>
-<div id="outline-container-org77066d9" class="outline-4">
-<h4 id="org77066d9">blackHole</h4>
-<div class="outline-text-4" id="text-org77066d9">
+<div id="outline-container-org7184bbb" class="outline-4">
+<h4 id="org7184bbb">blackHole</h4>
+<div class="outline-text-4" id="text-org7184bbb">
 <p>
 receptor of an audioStream inaudible to spectators. eg: audioStream &lt;helpMic&gt;
 </p>
 </div>
 </div>
 
-<div id="outline-container-org093f81a" class="outline-4">
-<h4 id="org093f81a">dinamicRange</h4>
+<div id="outline-container-orgaf73bce" class="outline-4">
+<h4 id="orgaf73bce">dinamicRange</h4>
 </div>
-<div id="outline-container-orgbfd20e8" class="outline-4">
-<h4 id="orgbfd20e8">coberture</h4>
+<div id="outline-container-org74a3a3c" class="outline-4">
+<h4 id="org74a3a3c">coberture</h4>
 </div>
-<div id="outline-container-org4a1b4e8" class="outline-4">
-<h4 id="org4a1b4e8">lowFreqDispertion</h4>
+<div id="outline-container-orgbbc12b1" class="outline-4">
+<h4 id="orgbbc12b1">lowFreqDispertion</h4>
 </div>
-<div id="outline-container-orgfa98624" class="outline-4">
-<h4 id="orgfa98624">audioSpots</h4>
-<div class="outline-text-4" id="text-orgfa98624">
+<div id="outline-container-orgbdf4de8" class="outline-4">
+<h4 id="orgbdf4de8">audioSpots</h4>
+<div class="outline-text-4" id="text-orgbdf4de8">
 <p>
 geolocable zones valuable as  acoustic-turist attraction
 </p>
 </div>
 <ul class="org-ul">
-<li><a id="org114ab30"></a>powerAlley<br />
-<div class="outline-text-5" id="text-org114ab30">
+<li><a id="org084b836"></a>powerAlley<br />
+<div class="outline-text-5" id="text-org084b836">
 <p>
 corridor not suitable for people sensible to lowFreqDispertion
 </p>
@@ -517,66 +518,66 @@ corridor not suitable for people sensible to lowFreqDispertion
 </li>
 </ul>
 </div>
-<div id="outline-container-org79fb52b" class="outline-4">
-<h4 id="org79fb52b">stageLekage</h4>
+<div id="outline-container-org5ba8990" class="outline-4">
+<h4 id="org5ba8990">stageLekage</h4>
 </div>
-<div id="outline-container-orga7a11e5" class="outline-4">
-<h4 id="orga7a11e5">bus</h4>
+<div id="outline-container-orga8a03ad" class="outline-4">
+<h4 id="orga8a03ad">bus</h4>
 </div>
-<div id="outline-container-orgd280910" class="outline-4">
-<h4 id="orgd280910">matrix</h4>
+<div id="outline-container-org433cee6" class="outline-4">
+<h4 id="org433cee6">matrix</h4>
 </div>
-<div id="outline-container-org1071052" class="outline-4">
-<h4 id="org1071052">subGroup</h4>
-<div class="outline-text-4" id="text-org1071052">
+<div id="outline-container-org7bee194" class="outline-4">
+<h4 id="org7bee194">subGroup</h4>
+<div class="outline-text-4" id="text-org7bee194">
 <p>
 consolidate operable audioStreams
 </p>
 </div>
 </div>
 
-<div id="outline-container-org4ab38e8" class="outline-4">
-<h4 id="org4ab38e8">VCA</h4>
-<div class="outline-text-4" id="text-org4ab38e8">
+<div id="outline-container-org2e420bf" class="outline-4">
+<h4 id="org2e420bf">VCA</h4>
+<div class="outline-text-4" id="text-org2e420bf">
 <p>
 execute domain in audioStream(s)  level(s) via controlStream
 </p>
 </div>
 </div>
 
-<div id="outline-container-orge3acc22" class="outline-4">
-<h4 id="orge3acc22">glitch</h4>
+<div id="outline-container-orgb149d77" class="outline-4">
+<h4 id="orgb149d77">glitch</h4>
 </div>
-<div id="outline-container-org5990400" class="outline-4">
-<h4 id="org5990400">feedback</h4>
+<div id="outline-container-org5cab612" class="outline-4">
+<h4 id="org5cab612">feedback</h4>
 </div>
-<div id="outline-container-orgddc1399" class="outline-4">
-<h4 id="orgddc1399">musicalError</h4>
+<div id="outline-container-org0cfcf5c" class="outline-4">
+<h4 id="org0cfcf5c">musicalError</h4>
 </div>
-<div id="outline-container-org7f001cb" class="outline-4">
-<h4 id="org7f001cb">userCookies</h4>
+<div id="outline-container-org61c9b80" class="outline-4">
+<h4 id="org61c9b80">userCookies</h4>
 </div>
-<div id="outline-container-org6e305ce" class="outline-4">
-<h4 id="org6e305ce">importance</h4>
-<div class="outline-text-4" id="text-org6e305ce">
+<div id="outline-container-orgd080d00" class="outline-4">
+<h4 id="orgd080d00">importance</h4>
+<div class="outline-text-4" id="text-orgd080d00">
 <p>
 subjetive valoration  writable by audioStream, controlStream, spectator, manager, etc
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgc5b5724" class="outline-4">
-<h4 id="orgc5b5724">moneyChannel</h4>
-<div class="outline-text-4" id="text-orgc5b5724">
+<div id="outline-container-org996b37c" class="outline-4">
+<h4 id="org996b37c">moneyChannel</h4>
+<div class="outline-text-4" id="text-org996b37c">
 <p>
 audioStream whith highest importance calculated by spectator, manager, and soloist.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org6db1eb2" class="outline-4">
-<h4 id="org6db1eb2">Reactionist</h4>
-<div class="outline-text-4" id="text-org6db1eb2">
+<div id="outline-container-org70d302d" class="outline-4">
+<h4 id="org70d302d">Reactionist</h4>
+<div class="outline-text-4" id="text-org70d302d">
 <p>
 Entities that use the reaction as their main behavior, do not take the time to reflect on the situation. 
 </p>
@@ -584,114 +585,114 @@ Entities that use the reaction as their main behavior, do not take the time to r
 </div>
 </div>
 
-<div id="outline-container-orgc82b940" class="outline-3">
-<h3 id="orgc82b940">Operators</h3>
-<div class="outline-text-3" id="text-orgc82b940">
+<div id="outline-container-orgd4b0659" class="outline-3">
+<h3 id="orgd4b0659">Operators</h3>
+<div class="outline-text-3" id="text-orgd4b0659">
 </div>
-<div id="outline-container-org4b21fd0" class="outline-4">
-<h4 id="org4b21fd0">mix</h4>
-<div class="outline-text-4" id="text-org4b21fd0">
+<div id="outline-container-org4cc1302" class="outline-4">
+<h4 id="org4cc1302">mix</h4>
+<div class="outline-text-4" id="text-org4cc1302">
 <p>
 add or subtrac  importance in audioStreams
 </p>
 </div>
 </div>
 
-<div id="outline-container-org8110bdd" class="outline-4">
-<h4 id="org8110bdd">append</h4>
-<div class="outline-text-4" id="text-org8110bdd">
+<div id="outline-container-orgea4f30d" class="outline-4">
+<h4 id="orgea4f30d">append</h4>
+<div class="outline-text-4" id="text-orgea4f30d">
 <p>
 open new audioStream
 </p>
 </div>
 </div>
 
-<div id="outline-container-org0414527" class="outline-4">
-<h4 id="org0414527">process</h4>
-<div class="outline-text-4" id="text-org0414527">
+<div id="outline-container-org2f67049" class="outline-4">
+<h4 id="org2f67049">process</h4>
+<div class="outline-text-4" id="text-org2f67049">
 <p>
 An instance who execute instructions and can have multiple threads who can be concurrent.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgb612ec5" class="outline-4">
-<h4 id="orgb612ec5">mute</h4>
-<div class="outline-text-4" id="text-orgb612ec5">
+<div id="outline-container-org0757577" class="outline-4">
+<h4 id="org0757577">mute</h4>
+<div class="outline-text-4" id="text-org0757577">
 <p>
 The art of kill an audioStream
 </p>
 </div>
 </div>
 
-<div id="outline-container-org32ef40a" class="outline-4">
-<h4 id="org32ef40a">route</h4>
-<div class="outline-text-4" id="text-org32ef40a">
+<div id="outline-container-org292af34" class="outline-4">
+<h4 id="org292af34">route</h4>
+<div class="outline-text-4" id="text-org292af34">
 <p>
 set up statics routes to specific ports, host, networks, readable by audioStream
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgda45fdb" class="outline-4">
-<h4 id="orgda45fdb">duplicate</h4>
+<div id="outline-container-orgcd97095" class="outline-4">
+<h4 id="orgcd97095">duplicate</h4>
 </div>
-<div id="outline-container-orgbb506c9" class="outline-4">
-<h4 id="orgbb506c9">align</h4>
+<div id="outline-container-org9e395cd" class="outline-4">
+<h4 id="org9e395cd">align</h4>
 </div>
-<div id="outline-container-org80d19be" class="outline-4">
-<h4 id="org80d19be">unAlign</h4>
+<div id="outline-container-orgee0a3bc" class="outline-4">
+<h4 id="orgee0a3bc">unAlign</h4>
 </div>
-<div id="outline-container-orge8f9822" class="outline-4">
-<h4 id="orge8f9822">equalize</h4>
+<div id="outline-container-org6aaf99d" class="outline-4">
+<h4 id="org6aaf99d">equalize</h4>
 </div>
-<div id="outline-container-org377b585" class="outline-4">
-<h4 id="org377b585">deformFrequencyResponse</h4>
+<div id="outline-container-org86a53a5" class="outline-4">
+<h4 id="org86a53a5">deformFrequencyResponse</h4>
 </div>
-<div id="outline-container-org5797f70" class="outline-4">
-<h4 id="org5797f70">deformTimeResponse</h4>
+<div id="outline-container-org52bb89d" class="outline-4">
+<h4 id="org52bb89d">deformTimeResponse</h4>
 </div>
-<div id="outline-container-org415e9c3" class="outline-4">
-<h4 id="org415e9c3">distract</h4>
+<div id="outline-container-orge0e7fdc" class="outline-4">
+<h4 id="orge0e7fdc">distract</h4>
 </div>
 </div>
-<div id="outline-container-org5ad5213" class="outline-3">
-<h3 id="org5ad5213">Control structures</h3>
-<div class="outline-text-3" id="text-org5ad5213">
+<div id="outline-container-orgb425e7a" class="outline-3">
+<h3 id="orgb425e7a">Control structures</h3>
+<div class="outline-text-3" id="text-orgb425e7a">
 </div>
-<div id="outline-container-org58acf27" class="outline-4">
-<h4 id="org58acf27">gainStructure</h4>
-<div class="outline-text-4" id="text-org58acf27">
+<div id="outline-container-org1b4a57d" class="outline-4">
+<h4 id="org1b4a57d">gainStructure</h4>
+<div class="outline-text-4" id="text-org1b4a57d">
 <p>
 Aim to preserve the dinamicRange in an audioChain
 </p>
 </div>
 </div>
 
-<div id="outline-container-org1e17a70" class="outline-4">
-<h4 id="org1e17a70">compress</h4>
+<div id="outline-container-org6ad3387" class="outline-4">
+<h4 id="org6ad3387">compress</h4>
 </div>
-<div id="outline-container-orge4ebf8f" class="outline-4">
-<h4 id="orge4ebf8f">expand</h4>
+<div id="outline-container-org04d74d1" class="outline-4">
+<h4 id="org04d74d1">expand</h4>
 </div>
-<div id="outline-container-orgacf34d2" class="outline-4">
-<h4 id="orgacf34d2">compensate</h4>
+<div id="outline-container-org77a699d" class="outline-4">
+<h4 id="org77a699d">compensate</h4>
 </div>
-<div id="outline-container-org6cb9143" class="outline-4">
-<h4 id="org6cb9143">panic [boolean]</h4>
-<div class="outline-text-4" id="text-org6cb9143">
+<div id="outline-container-org66b51d0" class="outline-4">
+<h4 id="org66b51d0">panic [boolean]</h4>
+<div class="outline-text-4" id="text-org66b51d0">
 <p>
 when TRUE trigger a priority on moneyChannel and apply force to make everthing else ignorable.
 </p>
 </div>
 </div>
-<div id="outline-container-org58eafb7" class="outline-4">
-<h4 id="org58eafb7">Environment Variables</h4>
-<div class="outline-text-4" id="text-org58eafb7">
+<div id="outline-container-org7b308f0" class="outline-4">
+<h4 id="org7b308f0">Environment Variables</h4>
+<div class="outline-text-4" id="text-org7b308f0">
 </div>
 <ul class="org-ul">
-<li><a id="org8a2ede0"></a>Initialization<br />
-<div class="outline-text-5" id="text-org8a2ede0">
+<li><a id="org6b4d414"></a>Initialization<br />
+<div class="outline-text-5" id="text-org6b4d414">
 <p>
 For each new state is required to operator to initialize the value of participant variables, in decreasing importances until time avaliable is extingished
 </p>
@@ -699,29 +700,29 @@ For each new state is required to operator to initialize the value of participan
 </li>
 </ul>
 </div>
-<div id="outline-container-org3f3ec4e" class="outline-4">
-<h4 id="org3f3ec4e">Score</h4>
-<div class="outline-text-4" id="text-org3f3ec4e">
+<div id="outline-container-orgbf53ffc" class="outline-4">
+<h4 id="orgbf53ffc">Score</h4>
+<div class="outline-text-4" id="text-orgbf53ffc">
 <p>
 Graphical representation of how an aural environment evolves in time
 </p>
 </div>
 </div>
-<div id="outline-container-org6b59566" class="outline-4">
-<h4 id="org6b59566">Resiliense</h4>
+<div id="outline-container-org92e2ac1" class="outline-4">
+<h4 id="org92e2ac1">Resiliense</h4>
 </div>
 </div>
-<div id="outline-container-orgca2320b" class="outline-3">
-<h3 id="orgca2320b">functions</h3>
-<div class="outline-text-3" id="text-orgca2320b">
+<div id="outline-container-orgc1fb17a" class="outline-3">
+<h3 id="orgc1fb17a">functions</h3>
+<div class="outline-text-3" id="text-orgc1fb17a">
 </div>
-<div id="outline-container-org23b8a0f" class="outline-4">
-<h4 id="org23b8a0f">contextConformation</h4>
-<div class="outline-text-4" id="text-org23b8a0f">
+<div id="outline-container-org991db98" class="outline-4">
+<h4 id="org991db98">contextConformation</h4>
+<div class="outline-text-4" id="text-org991db98">
 </div>
 <ul class="org-ul">
-<li><a id="org12eaf7d"></a>Monitor Network bootstrap<br />
-<div class="outline-text-5" id="text-org12eaf7d">
+<li><a id="org5088940"></a>Monitor Network bootstrap<br />
+<div class="outline-text-5" id="text-org5088940">
 <p>
 Pink noise homogeneous distribution in all mixes 
 -10db of all audioStreams in all mixes
@@ -733,110 +734,110 @@ Pink noise homogeneous distribution in all mixes
 </div>
 
 
-<div id="outline-container-org60e70f1" class="outline-4">
-<h4 id="org60e70f1">contextTransformation</h4>
+<div id="outline-container-org0f833cc" class="outline-4">
+<h4 id="org0f833cc">contextTransformation</h4>
 </div>
-<div id="outline-container-orgee99b6a" class="outline-4">
-<h4 id="orgee99b6a">highlight</h4>
+<div id="outline-container-org0b99a8a" class="outline-4">
+<h4 id="org0b99a8a">highlight</h4>
 </div>
-<div id="outline-container-orge1cd3a1" class="outline-4">
-<h4 id="orge1cd3a1">mask</h4>
+<div id="outline-container-orgb480f41" class="outline-4">
+<h4 id="orgb480f41">mask</h4>
 </div>
-<div id="outline-container-org7d231ed" class="outline-4">
-<h4 id="org7d231ed">backendBlurr</h4>
+<div id="outline-container-org4ee7016" class="outline-4">
+<h4 id="org4ee7016">backendBlurr</h4>
 </div>
-<div id="outline-container-orgf83ab55" class="outline-4">
-<h4 id="orgf83ab55">moneyChannel</h4>
+<div id="outline-container-orgd77c52b" class="outline-4">
+<h4 id="orgd77c52b">moneyChannel</h4>
 </div>
-<div id="outline-container-org2e29b5f" class="outline-4">
-<h4 id="org2e29b5f">faderRide</h4>
+<div id="outline-container-org18f2778" class="outline-4">
+<h4 id="org18f2778">faderRide</h4>
 </div>
-<div id="outline-container-org8c6389e" class="outline-4">
-<h4 id="org8c6389e">mutilate</h4>
+<div id="outline-container-orgd3c681a" class="outline-4">
+<h4 id="orgd3c681a">mutilate</h4>
 </div>
-<div id="outline-container-org6e4b714" class="outline-4">
-<h4 id="org6e4b714">manyToOne / oneToMany</h4>
-<div class="outline-text-4" id="text-org6e4b714">
+<div id="outline-container-org031f147" class="outline-4">
+<h4 id="org031f147">manyToOne / oneToMany</h4>
+<div class="outline-text-4" id="text-org031f147">
 <p>
 transit between distant sources and near sources.ej: disturb the balance between room mics and short field mics in a drumkit. / functions on master bus.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org33fef8b" class="outline-4">
-<h4 id="org33fef8b">reSignificate</h4>
-<div class="outline-text-4" id="text-org33fef8b">
+<div id="outline-container-orga60e096" class="outline-4">
+<h4 id="orga60e096">reSignificate</h4>
+<div class="outline-text-4" id="text-orga60e096">
 <p>
 momentary or permanent use of abnormal balance contrary to common sense.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgcf43acb" class="outline-4">
-<h4 id="orgcf43acb">southArt</h4>
-<div class="outline-text-4" id="text-orgcf43acb">
+<div id="outline-container-orge672c1d" class="outline-4">
+<h4 id="orge672c1d">southArt</h4>
+<div class="outline-text-4" id="text-orge672c1d">
 <p>
 any sofisticated use of entitys below 80hz
 </p>
 </div>
 </div>
 
-<div id="outline-container-org2025fd9" class="outline-4">
-<h4 id="org2025fd9">snakeAlucination</h4>
-<div class="outline-text-4" id="text-org2025fd9">
+<div id="outline-container-orga3d62ec" class="outline-4">
+<h4 id="orga3d62ec">snakeAlucination</h4>
+<div class="outline-text-4" id="text-orga3d62ec">
 <p>
 in homenage to the people who occupy the strait line between the FOH and stage, stereo extravagances.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org5d6f048" class="outline-4">
-<h4 id="org5d6f048">dualMono</h4>
+<div id="outline-container-org3ddce22" class="outline-4">
+<h4 id="org3ddce22">dualMono</h4>
 </div>
-<div id="outline-container-org8a64c37" class="outline-4">
-<h4 id="org8a64c37">heyMister</h4>
-<div class="outline-text-4" id="text-org8a64c37">
+<div id="outline-container-org1a6d869" class="outline-4">
+<h4 id="org1a6d869">heyMister</h4>
+<div class="outline-text-4" id="text-org1a6d869">
 <p>
 abandonation of the console in order to respond a distract query of a spectator
 </p>
 </div>
 </div>
 
-<div id="outline-container-org77826ab" class="outline-4">
-<h4 id="org77826ab">belowRadar</h4>
-<div class="outline-text-4" id="text-org77826ab">
+<div id="outline-container-orgf8011b3" class="outline-4">
+<h4 id="orgf8011b3">belowRadar</h4>
+<div class="outline-text-4" id="text-orgf8011b3">
 <p>
 find the minimun level of a entity
 </p>
 </div>
 </div>
 
-<div id="outline-container-org80e8583" class="outline-4">
-<h4 id="org80e8583">eliminateComparison</h4>
+<div id="outline-container-org3ae529e" class="outline-4">
+<h4 id="org3ae529e">eliminateComparison</h4>
 </div>
-<div id="outline-container-org82ea444" class="outline-4">
-<h4 id="org82ea444">fastBuildUp</h4>
+<div id="outline-container-org32ba4cd" class="outline-4">
+<h4 id="org32ba4cd">fastBuildUp</h4>
 </div>
-<div id="outline-container-org64a3f64" class="outline-4">
-<h4 id="org64a3f64">watchDog</h4>
-<div class="outline-text-4" id="text-org64a3f64">
+<div id="outline-container-org67ae619" class="outline-4">
+<h4 id="org67ae619">watchDog</h4>
+<div class="outline-text-4" id="text-org67ae619">
 <p>
 dinamicRange survelliance in search of rules violators, can eat userCookies 
 </p>
 </div>
 </div>
-<div id="outline-container-org8278da3" class="outline-4">
-<h4 id="org8278da3">prepareForNext</h4>
-<div class="outline-text-4" id="text-org8278da3">
+<div id="outline-container-org66dc584" class="outline-4">
+<h4 id="org66dc584">prepareForNext</h4>
+<div class="outline-text-4" id="text-org66dc584">
 <p>
 for each Evironment Variable 
   do initialize until avaliable time end
 </p>
 </div>
 </div>
-<div id="outline-container-org8d7e65f" class="outline-4">
-<h4 id="org8d7e65f">scoreReader</h4>
-<div class="outline-text-4" id="text-org8d7e65f">
+<div id="outline-container-orgef38922" class="outline-4">
+<h4 id="orgef38922">scoreReader</h4>
+<div class="outline-text-4" id="text-orgef38922">
 <p>
 Dictates next highlight in a time series score
 while( time state rolling )
@@ -847,9 +848,9 @@ while( time state rolling )
 </p>
 </div>
 </div>
-<div id="outline-container-orgdce3881" class="outline-4">
-<h4 id="orgdce3881">errorTail</h4>
-<div class="outline-text-4" id="text-orgdce3881">
+<div id="outline-container-org46ac526" class="outline-4">
+<h4 id="org46ac526">errorTail</h4>
+<div class="outline-text-4" id="text-org46ac526">
 <p>
 must activate resiliense tools to recover concentration
 </p>
@@ -857,30 +858,30 @@ must activate resiliense tools to recover concentration
 </div>
 </div>
 
-<div id="outline-container-orgaeaf95a" class="outline-3">
-<h3 id="orgaeaf95a">test</h3>
-<div class="outline-text-3" id="text-orgaeaf95a">
+<div id="outline-container-orgc0019a6" class="outline-3">
+<h3 id="orgc0019a6">test</h3>
+<div class="outline-text-3" id="text-orgc0019a6">
 </div>
-<div id="outline-container-org180af70" class="outline-4">
-<h4 id="org180af70">Survey your tools</h4>
+<div id="outline-container-org576dfa2" class="outline-4">
+<h4 id="org576dfa2">Survey your tools</h4>
 </div>
-<div id="outline-container-org8a2be78" class="outline-4">
-<h4 id="org8a2be78">Reach your goals</h4>
-<div class="outline-text-4" id="text-org8a2be78">
+<div id="outline-container-org003309f" class="outline-4">
+<h4 id="org003309f">Reach your goals</h4>
+<div class="outline-text-4" id="text-org003309f">
 </div>
 <ul class="org-ul">
-<li><a id="org2c3d6a4"></a>Tactic functions<br /></li>
+<li><a id="org2d1e504"></a>Tactic functions<br /></li>
 </ul>
 </div>
-<div id="outline-container-org7ed29b9" class="outline-4">
-<h4 id="org7ed29b9">Filling a hole</h4>
+<div id="outline-container-org2ede41c" class="outline-4">
+<h4 id="org2ede41c">Filling a hole</h4>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: son0p (Federico López)</p>
-<p class="date">Created: 2019-03-21 Thu 14:00</p>
+<p class="date">Created: 2019-03-21 Thu 14:09</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
