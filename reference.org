@@ -20,6 +20,8 @@ http://r-s-g.org/LCL/controlstructure.html
 
 https://jeremywsherman.com/blog/2015/10/10/idris-metaprogramming-hello-world/
 
+Disclaimer: mainly broken english.
+
 
 ** Data Types
 *** audioStream
@@ -77,10 +79,10 @@ https://jeremywsherman.com/blog/2015/10/10/idris-metaprogramming-hello-world/
 
     audioStream whith highest importance calculated by spectator, manager, and soloist.
 
-*** Reactors
+*** Reactionist
 
-Gente que sólo raneacción ejecutivos políticos,, no se toman el tiempo de estudiar la situacion
-
+    Entities that use the reaction as their main behavior, do not take the time to reflect on the situation. 
+    
 ** Operators
 *** mix
 
