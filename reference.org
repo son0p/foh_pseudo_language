@@ -12,7 +12,7 @@
 #+CONSTANTS: pi=3.14159265358979323846
 
 
-* A pseudo language for structure knowledge around FOH (Front of House) audio and mental activities
+* A pseudo language for structured knowledge about FOH (Front of House) audio and mental activities
 
 Inspired by:
 
@@ -26,7 +26,7 @@ Disclaimer: mainly broken english.
 ** Data Types
 *** audioStream
     
-    Finite duration flux of analog or digital audio signal related to an event, writable by operators, controlStream's, soundGenerator's, readable by spectator, blackhole, feedback, musicalError, glith, etc.
+    finite duration flux of analog or digital audio signal related to an event, writable by operators, controlStream's, soundGenerator's, readable by spectator, blackhole, feedback, musicalError, glith, etc.
 
 *** controlStream
 
@@ -37,13 +37,13 @@ Disclaimer: mainly broken english.
     animated acoustic absorbers, readable as audioStream
 
 *** crew
-    Humans with different talents organized in a hierarchical system
+    humans with different talents organized in a hierarchical system
 
 **** roadies
      audioStream guards
 
 **** production manager
-     can block or unblock master audioStream, conector with in-situ  provider of audio tools
+     can block or unblock master audioStream, conector with in-situ provider of audio tools
 *** audioChain
 *** blackHole
 
@@ -69,7 +69,7 @@ Disclaimer: mainly broken english.
 
 *** glitch
 *** feedback
-    Recursive induction of self audioStream where the amplified version of the audioStream surpass the source audioStream.
+    recursive induction of self audioStream where the amplified version of the audioStream surpass the source audioStream.
 *** musicalError
 *** userCookies
 *** importance
@@ -82,7 +82,7 @@ Disclaimer: mainly broken english.
 
 *** Reactionist
 
-    Entities that use the reaction as their main behavior, do not take the time to reflect on the situation. 
+    entities that use the reaction as their main behavior, do not take the time to reflect on the situation. 
     
 ** Operators
 *** mix
@@ -95,11 +95,11 @@ Disclaimer: mainly broken english.
 
 *** process
 
-    An instance who execute instructions and can have multiple threads who can be concurrent.
+    an instance who execute instructions and can have multiple threads who can be concurrent.
 
 *** mute
 
-    The art of kill an audioStream
+    the art of kill an audioStream
 
 *** route
 
@@ -115,7 +115,7 @@ Disclaimer: mainly broken english.
 ** Control structures
 *** gainStructure
 
-    Aim to preserve the dinamicRange in an audioChain
+    aim to preserve the dinamicRange in an audioChain
 
 *** compress
 *** expand
@@ -125,14 +125,14 @@ Disclaimer: mainly broken english.
     when TRUE trigger a priority on moneyChannel and apply force to make everthing else ignorable.
 *** Environment Variables
 **** Initialization
-     For each new state is required to operator to initialize the value of participant variables, in decreasing importances until time avaliable is extingished
+     for each new state is required to operator to initialize the value of participant variables, in decreasing importances until time avaliable is extingished
 *** Score
-    Graphical representation of how an aural environment evolves in time
+    graphical representation of how an aural environment evolves in time
 *** Resiliense 
 ** functions
 *** contextConformation
 **** Monitor Network bootstrap
-     Pink noise homogeneous distribution in all mixes 
+     pink noise homogeneous distribution in all mixes 
      -10db of all audioStreams in all mixes
      0db for focal subject
      
@@ -178,7 +178,7 @@ Disclaimer: mainly broken english.
     for each Evironment Variable 
       do initialize until avaliable time end
 *** scoreReader
-    Dictates next highlight in a time series score
+    dictates next highlight in a time series score
     while( time state rolling )
       eval time
         query next highlight
