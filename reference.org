@@ -69,6 +69,7 @@ Disclaimer: mainly broken english.
 
 *** glitch
 *** feedback
+    Recursive induction of self audioStream where the amplified version of the audioStream surpass the source audioStream.
 *** musicalError
 *** userCookies
 *** importance
