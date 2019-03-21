@@ -1,0 +1,191 @@
+#+TITLE:      FOH audio engineer pseudo-language
+#+AUTHOR:     son0p (Federico López)
+#+EMAIL:      fede2001@gmail.com
+#+INFOJS_OPT: view:t toc:t ltoc:t mouse:underline buttons:0 path:http://thomasf.github.io/solarized-css/org-info.min.js
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://thomasf.github.io/solarized-css/solarized-dark.min.css" />
+#+OPTIONS:    H:3 num:nil toc:t \n:nil ::t |:t ^:t -:t f:t *:t tex:t d:(HIDE) tags:not-in-toc
+#+STARTUP:    align fold nodlcheck hidestars oddeven lognotestate
+#+SEQ_TODO:   TODO(t) INPROGRESS(i) WAITING(w@) | DONE(d) CANCELED(c@)
+#+LANGUAGE:   en
+#+PRIORITIES: A C B
+#+CATEGORY:   communication
+#+CONSTANTS: pi=3.14159265358979323846
+#+STYLE: <link rel="stylesheet" type="text/css" href="slides.css" />
+
+* A pseudo language for structure knowledge around FOH (Front of House) audio and mental activities
+
+Inspired by:
+
+http://r-s-g.org/LCL/controlstructure.html
+
+https://jeremywsherman.com/blog/2015/10/10/idris-metaprogramming-hello-world/
+
+
+** Data Types
+*** audioStream
+    
+    Finite duration flux of analog or digital audio signal related to an event, writable by operators, controlStream's, soundGenerator's, readable by spectator, blackhole, feedback, musicalError, glith, etc.
+
+*** controlStream
+
+    finite flux of data intended to operate over an audioStream
+
+*** spectactor
+
+    animated acoustic absorbers, readable as audioStream
+
+*** crew
+    Humans with different talents organized in a hierarchical system
+
+**** roadies
+     audioStream guards
+
+**** production manager
+     can block or unblock master audioStream, conector with in-situ  provider of audio tools
+*** audioChain
+*** blackHole
+
+    receptor of an audioStream inaudible to spectators. eg: audioStream <helpMic>
+
+*** dinamicRange
+*** coberture
+*** lowFreqDispertion
+*** audioSpots
+    geolocable zones valuable as  acoustic-turist attraction
+**** powerAlley
+     corridor not suitable for people sensible to lowFreqDispertion
+*** stageLekage
+*** bus
+*** matrix
+*** subGroup
+
+    consolidate operable audioStreams
+
+*** VCA
+
+    execute domain in audioStream(s)  level(s) via controlStream
+
+*** glitch
+*** feedback
+*** musicalError
+*** userCookies
+*** importance
+
+    subjetive valoration  writable by audioStream, controlStream, spectator, manager, etc
+
+*** moneyChannel
+
+    audioStream whith highest importance calculated by spectator, manager, and soloist.
+
+*** Reactors
+
+Gente que sólo raneacción ejecutivos políticos,, no se toman el tiempo de estudiar la situacion
+
+** Operators
+*** mix
+
+    add or subtrac  importance in audioStreams
+
+*** append
+
+    open new audioStream
+
+*** process
+
+    An instance who execute instructions and can have multiple threads who can be concurrent.
+
+*** mute
+
+    The art of kill an audioStream
+
+*** route
+
+    set up statics routes to specific ports, host, networks, readable by audioStream
+
+*** duplicate
+*** align
+*** unAlign
+*** equalize
+*** deformFrequencyResponse
+*** deformTimeResponse
+*** distract
+** Control structures
+*** gainStructure
+
+    Aim to preserve the dinamicRange in an audioChain
+
+*** compress
+*** expand
+*** compensate
+*** panic [boolean]
+
+    when TRUE trigger a priority on moneyChannel and apply force to make everthing else ignorable.
+*** Environment Variables
+**** Initialization
+     For each new state is required to operator to initialize the value of participant variables, in decreasing importances until time avaliable is extingished
+*** Score
+    Graphical representation of how an aural environment evolves in time
+*** Resiliense 
+** functions
+*** contextConformation
+**** Monitor Network bootstrap
+     Pink noise homogeneous distribution in all mixes 
+     -10db of all audioStreams in all mixes
+     0db for focal subject
+     
+     
+*** contextTransformation
+*** highlight
+*** mask
+*** backendBlurr
+*** moneyChannel
+*** faderRide
+*** mutilate
+*** manyToOne / oneToMany
+
+    transit between distant sources and near sources.ej: disturb the balance between room mics and short field mics in a drumkit. / functions on master bus.
+
+*** reSignificate
+
+    momentary or permanent use of abnormal balance contrary to common sense.
+
+*** southArt
+
+    any sofisticated use of entitys below 80hz
+
+*** snakeAlucination
+
+    in homenage to the people who occupy the strait line between the FOH and stage, stereo extravagances.
+
+*** dualMono
+*** heyMister
+
+    abandonation of the console in order to respond a distract query of a spectator
+
+*** belowRadar
+
+    find the minimun level of a entity
+
+*** eliminateComparison
+*** fastBuildUp
+*** watchDog
+
+    dinamicRange survelliance in search of rules violators, can eat userCookies 
+*** prepareForNext
+    for each Evironment Variable 
+      do initialize until avaliable time end
+*** scoreReader
+    Dictates next highlight in a time series score
+    while( time state rolling )
+      eval time
+        query next highlight
+          call operator attention 
+            cue call bar countdown
+*** errorTail
+    must activate resiliense tools to recover concentration
+
+** test
+*** Survey your tools
+*** Reach your goals
+**** Tactic functions
+*** Filling a hole
