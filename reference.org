@@ -35,9 +35,12 @@ Disclaimer: mainly broken english.
 
    Finite flux of data intended to operate over an /audioStream/
 
-*Group*
 
-Non empty set with at least one internal operation (addition), and an inverse element (mute). 
+*group*
+
+
+
+Non empty set with at least one internal operation (addition), and an inverse element (mute). ¿can be associative?
 
 *spectactor*
 
