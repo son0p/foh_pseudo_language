@@ -8,4 +8,4 @@ Some audio operators, that are going to retire, want to testify (in a subjetive 
 
 [Reference online HTML ](https://son0p.github.io/foh_pseudo_language/reference.html)
 
-[Reference file .org](https://son0p.github.io/foh_pseudo_language/reference.org)
+[Reference .org file](https://son0p.github.io/foh_pseudo_language/reference.org)

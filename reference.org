@@ -1,4 +1,5 @@
 #+TITLE:      Slencer
+#+SUBTITLE:  Fictions and pure FOH domain reasonings  
 #+AUTHOR:     son0p (Federico López)
 #+EMAIL:      fede2001@gmail.com
 #+INFOJS_OPT: view:t toc:t ltoc:t mouse:underline buttons:0y path:http://thomasf.github.io/solarized-css/org-info.min.js
@@ -14,8 +15,6 @@
 
 ** About
 A pseudo language for structured knowledge about FOH (Front of House) audio and mental activities.
-
-Contains fictions and FOH pure domain reasonings.
 
 Inspired by:
 
