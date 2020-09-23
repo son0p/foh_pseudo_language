@@ -1,7 +1,8 @@
-#+TITLE:      FOH audio engineer pseudo-language reference
+#+TITLE:      Slencer
 #+AUTHOR:     son0p (Federico López)
 #+EMAIL:      fede2001@gmail.com
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://thomasf.github.io/solarized-css/solarized-dark.min.css" />
+#+INFOJS_OPT: view:t toc:t ltoc:t mouse:underline buttons:0y path:http://thomasf.github.io/solarized-css/org-info.min.js
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/slate/bootstrap.min.css" />
 #+OPTIONS:    H:3 num:nil  \n:nil ::t |:t ^:t -:t f:t *:t tex:t  tags:not-in-toc
 #+STARTUP:    align fold nodlcheck hidestars oddeven lognotestate
 #+SEQ_TODO:   TODO(t) INPROGRESS(i) WAITING(w@) | DONE(d) CANCELED(c@)
@@ -11,7 +12,10 @@
 #+CONSTANTS: pi=3.14159265358979323846
 
 
-* A pseudo language for structured knowledge about FOH (Front of House) audio and mental activities
+** About
+A pseudo language for structured knowledge about FOH (Front of House) audio and mental activities.
+
+Contains fictions and FOH pure domain reasonings.
 
 Inspired by:
 
@@ -23,130 +27,162 @@ Disclaimer: mainly broken english.
 
 
 ** Data Types
-*** audioStream
+   *audioStream*
 
-    Finite duration flux of analog or digital audio signal related to an event, writable by operators, controlStream's, soundGenerator's, readable by spectator, blackhole, feedback, musicalError, glith, etc.
+   Finite(?) duration flux of analog or digital audio signal related to an event, writable by /operators/, /controlStream/, /soundGenerator/, readable by /spectator/, /blackhole/, /feedback/, /musicalError/, /glith/
 
-*** controlStream
+   *controlStream*
 
-    finite flux of data intended to operate over an audioStream
+   Finite flux of data intended to operate over an /audioStream/
 
-*** Group
+*Group*
 
 Non empty set with at least one internal operation (addition), and an inverse element (mute). 
 
-*** spectactor
+*spectactor*
 
-    animated acoustic absorbers, readable as audioStream
+    Animated acoustic absorbers, readable as /audioStream/
 
-*** crew
+*crew*
 
     Humans with different talents organized in a hierarchical system
 
-**** roadies
-     audioStream guards
+- roadies: //audioStream// guards
 
-**** production manager
-     can block or unblock master audioStream, conector with in-situ provider of audio tools
-*** audioChain
-*** blackHole
+- production manager: can block or unblock master /audioStream/, conector with in-situ provider of audio tools
 
-    receptor of an audioStream inaudible to spectators. eg: audioStream <helpMic>
+*audioChain*
 
-*** dinamicRange
-*** coberture
-*** lowFreqDispertion
+*blackHole*
+
+    Receptor of an /audioStream/ inaudible to spectators. eg: /audioStream/ <helpMic>
+
+*dinamicRange* 
+
+*coberture*
+
+*lowFreqDispertion*
 
 Acoustic densities fenomenology at south of the spectrum, noticeable on the skin
 
-*** audioSpots
-    geolocable zones valuable as  acoustic-turist attraction
-**** powerAlley
-     corridor not suitable for people sensible to lowFreqDispertion
-*** stageLekage
-*** bus
-*** matrix
-*** subGroup
+*audioSpots*
+   
+ Geolocable zones valuable as  acoustic-turist attraction
 
-    consolidate operable audioStreams
+- powerAlley:     Corridor not suitable for people sensible to lowFreqDispertion
 
-*** VCA
+*stageLekage*
 
-    execute domain in audioStream(s)  level(s) via controlStream
+*bus*
 
-*** glitch
-*** feedback
-    recursive induction of self audioStream where the amplified version of the audioStream surpass the source audioStream.
-*** musicalError
-*** userCookies
-*** importance
+*matrix*
 
-    subjetive valoration  writable by audioStream, controlStream, spectator, manager, etc
+*subGroup*
 
-*** moneyChannel
+Consolidate operable /audioStream/s
 
-    audioStream whith highest importance calculated by spectator, manager, and soloist.
+*VCA*
 
-*** Reactionist
+Execute domain in /audioStream/(s)  level(s) via controlStream
 
-    entities that use the reaction as their main behavior, do not take the time to reflect on the situation. 
+*glitch*
+
+*feedback*
+
+Recursive induction of self /audioStream/ where the amplified version of the /audioStream/ surpass the source /audioStream/.
+
+*musicalError*
+
+Fluctuations of expected musical conventions. 
+
+*userCookies*
+
+*importance*
+
+Subjetive valoration  writable by /audioStream/, controlStream, spectator, manager, etc
+
+*moneyChannel*
+
+/audioStream/ whith highest importance calculated by spectator, manager, and soloist.
+
+*Reactionist*
+
+Entity that use the reaction as their main behavior, do not take the time to reflect on the situation, Real time utility. 
+
+*identityElement*
+
+All pass entity, information can be grabbed from it.
     
 ** Operators
-*** mix
+*mix*
 
-    add or subtrac  importance in audioStreams
+    Add or subtrac  importance in /audioStream/s
 
-*** append
+*append*
 
-    open new audioStream
+    Create a new /audioStream/ at the end of a /list/
 
-*** process
+*process*
 
     An instance who execute instructions and can have multiple threads who can be concurrent.
 
-*** mute
+*mute*
 
-    The art of kill an audioStream
+    The art of kill an /audioStream/
 
-*** route
+*route*
 
-    set up statics routes to specific ports, host, networks, readable by audioStream
+    Set up statics routes to specific ports, host, networks, readable by /audioStream/
 
-*** duplicate
-*** align
-*** unAlign
-*** equalize
-*** deformFrequencyResponse
-*** deformTimeResponse
-*** distract
+*duplicate*
+
+*align*
+
+*unAlign*
+
+*equalize*
+
+*deformFrequencyResponse*
+
+*deformTimeResponse*
+
+*distract*
+
 ** Control structures
-*** gainStructure
+
+*gainStructure*
 
     Aim to preserve the dinamicRange in an audioChain
 
-*** compress
-*** expand
-*** compensate
-*** panic [boolean]
+*compress*
 
-    when TRUE trigger a priority on moneyChannel and apply force to make everthing else ignorable.
-*** Environment Variables
-**** Initialization
+*expand*
 
-     For each new state is required to operator to initialize the value of participant variables, in decreasing importances until time avaliable is extingished
+*compensate*
 
-*** Score
+*panic [boolean]*
 
-    Graphical representation of how an aural environment evolves in time
+    When TRUE, trigger a priority on moneyChannel and apply force to make everthing else ignorable.
 
-*** Resiliense
-** functions
+*Environment Variables*
+
+-Initialization: For each new state is required to operator to initialize the value of participant variables, in decreasing importances until time avaliable is extingished
+
+*Score*
+
+    Graphical representation of how an environment evolves in time
+
+*Resiliense*
+
+** Functions
 *** contextConformation
-**** Monitor Network bootstrap
+*** Monitor Network bootstrap
 
-     Pink noise homogeneous distribution in all mixes 
-     -10db of all audioStreams in all mixes
-     0db for focal subject
+#+BEGIN_SRC R
+     allMixes <- pinkNoise homogeneous distribution  
+     -10db %>% all audioStreams %>% all mixes
+      focal subject <- 0db 
+#+END_SRC
 
 *** contextTransformation
 *** highlight
@@ -157,34 +193,34 @@ Acoustic densities fenomenology at south of the spectrum, noticeable on the skin
 *** mutilate
 *** manyToOne / oneToMany
 
-    transit between distant sources and near sources.ej: disturb the balance between room mics and short field mics in a drumkit. / functions on master bus.
+    Transit between distant sources and near sources.ej: disturb the balance between room mics and short field mics in a drumkit. / functions on master bus.
 
 *** reSignificate
 
-    momentary or permanent use of abnormal balance contrary to common sense.
+    Momentary or permanent use of abnormal balance contrary to common sense.
 
 *** southArt
 
-    any sofisticated use of entitys below 80hz
+    Any sofisticated use of entitys below 80hz
 
 *** snakeAlucination
 
-    in homenage to the people who occupy the strait line between the FOH and stage, stereo extravagances.
+    In homenage to the people who occupy the strait line between the FOH and stage, stereo extravagances.
 
 *** dualMono
 *** heyMister
 
-    abandonation of the console in order to respond a distract query of a spectator
+    Abandonation of the console in order to respond a distract query of a spectator
 
 *** belowRadar
 
-    find the minimun level of a entity
+    Find the minimun level of a entity
 
 *** eliminateComparison
 *** fastBuildUp
 *** watchDog
 
-    dinamicRange survelliance in search of rules violators, can eat userCookies 
+    DinamicRange survelliance in search of rules violators, can eat userCookies 
 *** prepareForNext
     for each Evironment Variable 
       do initialize until avaliable time end
@@ -197,10 +233,11 @@ Acoustic densities fenomenology at south of the spectrum, noticeable on the skin
           call operator attention 
             cue call bar countdown
 *** errorTail
-    must activate resiliense tools to recover concentration
+    Must activate resiliense tools to recover concentration
 
 ** test
-*** Survey your tools
-*** Reach your goals
-**** Tactic functions
-*** Filling a hole
+*Survey your tools
+
+*Tactic functions
+
+*Filling a hole
