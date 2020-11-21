@@ -2,7 +2,7 @@
 #+SUBTITLE:  Fictions and pure FOH domain reasonings  
 #+AUTHOR:     son0p (Federico López)
 #+EMAIL:      fede2001@gmail.com
-#+INFOJS_OPT: view:t toc:t ltoc:t mouse:underline buttons:0y path:http://thomasf.github.io/solarized-css/org-info.min.js
+#+INFOJS_OPT: view:t toc:t  mouse:underline buttons:0y path:http://thomasf.github.io/solarized-css/org-info.min.js
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/slate/bootstrap.min.css" />
 #+OPTIONS:    H:3 num:nil  \n:nil ::t |:t ^:t -:t f:t *:t tex:t  tags:not-in-toc
 #+STARTUP:    align fold nodlcheck hidestars oddeven lognotestate
@@ -26,18 +26,15 @@ Disclaimer: mainly broken english.
 
 
 ** Data Types
-   *audioStream*
+*audioStream*
 
    Finite(?) duration flux of analog or digital audio signal related to an event, writable by /operators/, /controlStream/, /soundGenerator/, readable by /spectator/, /blackhole/, /feedback/, /musicalError/, /glith/
 
-   *controlStream*
+*controlStream*
 
    Finite flux of data intended to operate over an /audioStream/
 
-
 *group*
-
-
 
 Non empty set with at least one internal operation (addition), and an inverse element (mute). ¿can be associative?
 
@@ -55,29 +52,39 @@ Non empty set with at least one internal operation (addition), and an inverse el
 
 *audioChain*
 
+Dicoverable list of entities mutually connected to provide a path to /audioStream/ or /controlStream/
+
 *blackHole*
 
     Receptor of an /audioStream/ inaudible to spectators. eg: /audioStream/ <helpMic>
 
-*dinamicRange* 
+*dynamicRange* 
+
+Optimal band to be preserved in all /audioChain/
 
 *coberture*
 
-*lowFreqDispertion*
+Acepted capacity of dispersion of an /audioStream/ 
+
+*lowFreqDispersion*
 
 Acoustic densities fenomenology at south of the spectrum, noticeable on the skin
 
 *audioSpots*
    
- Geolocable zones valuable as  acoustic-turist attraction
+ Geolocatable zones valuable as acoustic-turist attractions
 
-- powerAlley:     Corridor not suitable for people sensible to lowFreqDispertion
+- powerAlley: Corridor not suitable for people sensitive to high SPL nodes in /lowFreqDispertion/
 
 *stageLekage*
+
+Autonomous emission form the stage, independent of the PA
 
 *bus*
 
 *matrix*
+
+Derivatives from master /audioStream/, exploitable as auxiliary mixes
 
 *subGroup*
 
@@ -89,6 +96,8 @@ Execute domain in /audioStream/(s)  level(s) via controlStream
 
 *glitch*
 
+Unusual /audioStream/'s artifacts
+
 *feedback*
 
 Recursive induction of self /audioStream/ where the amplified version of the /audioStream/ surpass the source /audioStream/.
@@ -99,9 +108,11 @@ Fluctuations of expected musical conventions.
 
 *userCookies*
 
+Storable and retrievable public preferences of a user. Writable by /talent/, Readable by /talent/
+
 *importance*
 
-Subjetive valoration  writable by /audioStream/, controlStream, spectator, manager, etc
+Subjetive valoration writable by /audioStream/, controlStream, spectator, manager, etc
 
 *moneyChannel*
 
@@ -203,7 +214,7 @@ All pass entity, information can be grabbed from it.
 
 *** southArt
 
-    Any sofisticated use of entitys below 80hz
+    Any sofisticated use of entities below 80hz
 
 *** snakeAlucination
 
